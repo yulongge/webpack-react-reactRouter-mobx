@@ -1,0 +1,123 @@
+.Detail {
+	padding: 3rem;
+	width: 70%;
+	margin: auto;
+	background: #fff;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	&__Ins {
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding-bottom: 2rem;
+		&__Img {
+			flex: 1;
+		}
+		&__Desc {
+			flex: 2;
+			p {
+				margin: 5px;
+			}
+			&__Name {
+				color: #31333f;
+				font-size: 2rem;
+			}
+			&__Words {
+				color: #a5b1b7;
+				font-size: 1.4rem;
+			}
+			&__Price {
+				color: #a5b1b7;
+				font-size: 1.2rem;
+				i {
+					color: #ff3a52;
+					font-size: 2rem;
+					font-style: normal;
+				}
+			}
+		}
+		&__Buy {
+			flex: 1;
+			text-align: center;
+			&__Btn {
+				background: #ff3e57;
+				width: 108px;
+				height: 36px;
+				display: inline-block;
+				font-size: 1.4rem;
+				color: #fff;
+				line-height: 36px;
+				border-radius: 5px;
+			}
+		}
+		.line();
+
+	}
+
+	&__Msg {
+		margin-top: 3rem;
+		&__Title {
+			color: #31333f;
+			font-size: 1.6rem;
+			.icon("/src/assets/img/plugin_img.png", 23px, 21px);	
+		}
+		&__PluginMsg {
+			.icon("/src/assets/img/plugin_msg.png", 18px, 19px);
+		}
+		&__Developer {
+			.icon("/src/assets/img/plugin_developer.png", 23px, 24px);
+		}
+		&__PublishDate {
+			.icon("/src/assets/img/plugin_date.png", 23px, 22px);
+		}
+		&__Type {
+			.icon("/src/assets/img/plugin_type.png", 24px, 21px);
+		}
+		&__BrightSpot {
+			.icon("/src/assets/img/plugin_brightSpot.png", 21px, 24px);
+		}
+		&__Con {
+			overflow: auto;
+			white-space: nowrap;
+			img {
+				margin-right: 1rem;
+			}
+		}
+		&__Words {
+			color: #a5b1b7;
+			font-size: 1.4rem;
+		}
+	}
+
+}
+
+.icon(@url: "/src/assets/img/plugin_img.png", @width: 23px, @height: 21px) {
+	display: inline-block;
+	position: relative;
+	height: @height;
+	padding-left: 28px;
+	line-height: @height;
+	margin-bottom: 1rem;
+	&:before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		width: @width;
+		height: @height;
+		background: url(@url);
+		left: 0px;
+	}
+}
+
+.line (@borderWidth: 1px, @borderStyle: solid, @borderColor: #e4e4e4, @borderPos: bottom) {
+	&:after {
+		content: "";
+		position: absolute;
+		width: 200%;
+		@{borderPos}: 0px;
+		left: 0px;
+		transform: scale(0.5);
+		transform-origin: 0px 0px 0px;
+		border-@{borderPos}: @borderWidth @borderStyle @borderColor;
+	}
+}

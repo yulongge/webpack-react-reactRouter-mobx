@@ -1,0 +1,47 @@
+.Home {
+	width: 100%;
+	&__List {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		&__Title {
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 1000px;
+			margin: auto;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			.hotIcon {
+				.icon("/src/assets/img/hot.png");
+			}
+			.newIcon {
+				.icon("/src/assets/img/new.png");
+			}
+		}
+		&__Con {
+			display: flex;
+			justify-content: space-between;
+			max-width: 1000px;
+			margin: auto;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.icon(@url: "/src/assets/img/hot.png") {
+	display: inline-block;
+	position: relative;
+	height: 29px;
+	padding-left: 32px;
+	line-height: 29px;
+	&:after {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		width: 29px;
+		height: 29px;
+		background: url(@url);
+		left: 0px;
+	}
+}
