@@ -1,7 +1,10 @@
 import React from 'react';
 import './style'
+import { inject, observer } from 'mobx-react';
 import { Banner, Card } from 'components';
 
+@inject("HomeStore")
+@observer
 export default class Home extends React.Component {
 	constructor(...args) {
 		super(...args);
@@ -9,7 +12,17 @@ export default class Home extends React.Component {
 			1,2,3,4
 		];
 	}
+
+	componentWillMount() {
+		//this.props.HomeStore.getHotPlugins();	
+	}
+
+	componentDidMount() {
+		this.props.HomeStore.getHotPlugins();
+	}
+
 	render() {
+		console.log(this.props, 'home props');
 		return (
 			<div className="Home">
 				<Banner />

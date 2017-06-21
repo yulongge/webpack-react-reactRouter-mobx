@@ -20,7 +20,7 @@ export default class Detail extends React.Component {
 						<p className="Detail__Ins__Desc__Words">
 							由畅游游戏公司自主研发的日式风格H5互动小游戏。经典的抽奖活动，有趣的互动奖品可自行设置；截至到17年9月，有8000家公司使用该游戏接入微信平台，成为新一轮拉粉厉器；
 						</p>
-						<p className="Detail__Ins__Desc__Price"><i>￥20.00</i> 元/天</p>
+						<p className="Detail__Ins__Desc__Price"><i>￥20.00</i> 元/月</p>
 					</div>
 					<div className="Detail__Ins__Buy">
 						<Link className="Detail__Ins__Buy__Btn">立即购买 </Link>
